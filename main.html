@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music star</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <button
+        type="button"
+        id="contactButton"
+        onclick="showContactForm()"
+        class="btn btn-primary"
+      >
+        Kontakt
+      </button>
+    </header>
+    <div class="aboutMeDIV">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Michael_Jackson_Dangerous_World_Tour_1993.jpg/800px-Michael_Jackson_Dangerous_World_Tour_1993.jpg"
+      />
+      <div class="aboutMeDIVText">
+        <h2>O mnie</h2>
+      </div>
+    </div>
+    <div id="contactForm" class="contactForm">
+      <h2>Formularz kontaktowy</h2>
+      <form>
+        <label for="name">Imię i nazwisko:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Wprowadź swoje imię i nazwisko"
+        />
+
+        <label for="email">Adres email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="example@example.com"
+        />
+
+        <label for="name">Numer telefonu:</label>
+        <input
+          type="phone"
+          id="phoneNumber"
+          name="phoneNumber"
+          placeholder="XXXXXXXXX"
+        />
+
+        <label for="name">Treść wiadomości:</label>
+        <textarea  type="text" id="msg" name="msg" > </textarea>
+      </form>
+      <div id="verification" class="verification">
+        <div class="questionField">Pytanie weryfikacyjne</div>
+        <div id="question" class="field"></div>
+        <div class="answers">
+          <div class="answerWrapper">
+            <label id="labelA" for="answer"></label>
+            <input type="radio" name="answer" id="answerA" />
+          </div>
+          <div class="answerWrapper">
+            <label id="labelB" for="answer"></label>
+            <input type="radio" name="answer" id="answerB" />
+          </div>
+          <div class="answerWrapper">
+            <label id="labelC" for="answer"></label>
+            <input type="radio" name="answer" id="answerC" />
+          </div>
+        </div>
+      </div>
+      <button
+        id="sendFormButton"
+        onclick="checkIfEmptyOrWrong()"
+        class="btn btn-secondary"
+      >
+        Wyślij zgłoszenie
+      </button>
+      <button
+        class="closeButton"
+        onclick="closeContactForm()"
+      >
+        <i class="fa fa-times"></i>
+      </button>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
